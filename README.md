@@ -26,7 +26,15 @@ Once the repository is cloned, simply navigate to the folder where main_openpiv.
 - Redaraw IWs checkbox to either redraw or fix IWs when switching between frames.
 - Plot correlation matrix button calls a pop-up window, which display the correlation matrix. The correlation matrix is fully rotatable.
  
-**NOTE:**
+**NOTE:** Currently it is essential that the image size of the raw images and those of the flow field match, otherwise the IW bounding boxes will not be displayed in the proper position. Unfortunately, there seems to be no simple way to save a figure to exact pixel size. A workaround is to use the display DPI, see http://stackoverflow.com/questions/13714454/specifying-and-saving-a-figure-with-exact-size-in-pixels for example. 
+In particular, one might find the bellow useful for modifying the openpiv.tool 'display_vector_field' function by appropriately adding the below:
+    pl.axis('off')
+    q.axes.get_xaxis().set_visible(False)
+    q.axes.get_yaxis().set_visible(False)
+    fig.set_size_inches(float( width )/float( my_dpi ),float( height )/float( my_dpi))
+    pl.savefig(new_file,interpolation = "none", bbox_inches='tight',pad_inches = 0)
+    pl.close()
+
 
 
 ##Contributors
