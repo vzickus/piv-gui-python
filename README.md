@@ -19,6 +19,8 @@ Once the repository is cloned, simply navigate to the folder where main.py is an
 
 ![alt tag](https://github.com/vzickus/blob/master/piv-gui-python/piv_gui.png)
 
+![My image](vzickus.github.com/master/piv_gui.png)
+
 
 
 
