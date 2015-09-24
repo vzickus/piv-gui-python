@@ -20,12 +20,12 @@ Once the repository is cloned, simply navigate to the folder where main_openpiv.
 - The outer scrollbars are for moving IWs.Depending on your screen size, there might be 2 additional scroll bars appearing, so the whole image could be inspected. 
 - Sliding bar,and Prev./Next Frame buttons moves to the next/previous frame.
 - Load button is currently not functional. This could be functionalized for image loading.
-- Small/Big IW/overlap size spin boxes set the sizes of the windows/overlap assuming square IWs.
+- Small/Big IW/overlap size spin boxes set the sizes of the windows/overlap assuming square IWs. Press ENTER to confirm input.
 - Small/Big Iw are currently set to be scaled to 64 *x* 64, and 128 *x* 128 pixel size before displaying.
 - Combobox is currently not functional. The plan is to incorporate "on demand" vector plotting, for either paired or sequential images.
 - Redaraw IWs checkbox to either redraw or fix IWs when switching between frames.
 - Plot correlation matrix button calls a pop-up window, which display the correlation matrix. The correlation matrix is fully rotatable.
-
+**NOTE:**
 
 
 ##Contributors
