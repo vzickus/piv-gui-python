@@ -17,6 +17,8 @@ Installation instructions for Qt, Sip, and PyQt are widely available online, e.g
 #Running
 Once the repository is cloned, simply navigate to the folder where main.py is and run python main.py. This should hopefully start the GUI. Sample images are included in the repository.
 
+![alt tag](https://github.com/vzickus/piv-gui-python/edit/master/piv_gui.png)
+
 
 
 
