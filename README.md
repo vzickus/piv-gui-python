@@ -45,7 +45,7 @@ One can check the DPI [here](http://www.infobyip.com/detectmonitordpi.php), but 
 If you are interested in developing the *graphical* part of the GUI (the .ui file), QtDesigner is a relatively simple software created for that purpose (comes with Qt), with a good number of video tutorials, e.g. [QtDesigner Tutorial on Youtube](https://www.youtube.com/watch?v=GLqrzLIIW2E). Once the file is edited, it must be converted to .py file, using:
 
 ```python
-pythonuic.py input.ui -o output.py -x
+pyuic4 input.ui -o output.py
 ```
 **NOTE:** The converted .ui should not be modified, as any changes will be overwritten.
 
