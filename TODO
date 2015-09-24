@@ -1,0 +1,23 @@
+# things todo for piv_gui
+
++enable plotting vectors on demand
+
++avoid the need to match the raw/flow_field image sizes?
+
++functionalize the load button to choose the directory of the images.
+
++Obtain IW/overlap values automatically to whatever IW/overlap sizes were set in the analysis.
+
++enable zooming
+
++check if moving_sub_window_arrays function is "compatible" with extended_search in openpiv
+
++check if "first"/"second" frame are consistent with openpiv definition.
+
++improve variable names?
+
++Test if the dynamic range of the big/small IWs are the same. (Currently image is set cmax = 255, cmin = 0, which seems to work)
+
++Improve the scalability of the GUI (automate scaling of IWs to something reasonable)
+
++Implement this GUI to the openpiv GUI
