@@ -25,6 +25,7 @@ Once the repository is cloned, simply navigate to the folder where main_openpiv.
 - Combobox is currently not functional. The plan is to incorporate "on demand" vector plotting, for either paired or sequential images.
 - Redaraw IWs checkbox to either redraw or fix IWs when switching between frames.
 - Plot correlation matrix button calls a pop-up window, which display the correlation matrix. The correlation matrix is fully rotatable.
+ 
 **NOTE:**
 
 
