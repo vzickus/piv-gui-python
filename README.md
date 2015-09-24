@@ -28,9 +28,11 @@ Once the repository is cloned, simply navigate to the folder where main_openpiv.
 
 
 
-Markup :  # Heading 1 #
+
 #Contributors
+
 *Vytautas Zickus
+
 *Jonathan Taylor
 
 
