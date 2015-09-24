@@ -47,7 +47,7 @@ If you are interested in developing the *graphical* part of the GUI (the .ui fil
 ```python
 pyuic4 input.ui -o output.py
 ```
-**NOTE:** The converted .ui should not be modified, as any changes will be overwritten.
+**NOTE:** The converted .ui should not be modified, as any changes will be overwritten whenever the .ui file is edited and converted.
 
 ##Contributors
 
