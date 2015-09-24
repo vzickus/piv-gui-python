@@ -12,7 +12,8 @@ In essence, PIV relies on statistical "best match" approach, when estimating vel
 ##Requirements
 OpenPIV and its dependencies, as well as Qt, Sip, an PyQt.
 Installation instruction for OpenPIV can be found here: http://openpiv.readthedocs.org/en/latest/src/installation_instruction.html
-Installation instructions for Qt, Sip, and PyQt are widely available online, e.g. : http://doc.qt.io/qt-4.8/installation.html, http://pyqt.sourceforge.net/Docs/PyQt4/installation.html.
+Installation instructions for Qt, Sip, and PyQt are widely available online, e.g. : http://doc.qt.io/qt-4.8/installation.html, http://pyqt.sourceforge.net/Docs/PyQt4/installation.html. QtDesigner (a GUI for creating Qt GUIs) was used to modify .ui files.
+
 
 ##Running
 Once the repository is cloned, simply navigate to the folder where main_openpiv.py is and type 'python main_openpiv.py' in the terminal. This should hopefully start the GUI. Example data images are included in the repository. Below is a screenshot of the GUI in action. 
@@ -39,6 +40,14 @@ pl.close()
 ```
 One can check the DPI [here](http://www.infobyip.com/detectmonitordpi.php), but most likely it will need a few tries to get the exact value (it can be float).
 
+##Editing the GUI
+
+If you are interested in developing the *graphical* part of the GUI (the .ui file), QtDesigner is a relatively simple software created for that purpose (comes with Qt), with a good number of video tutorials, e.g. [QtDesigner Tutorial on Youtube](https://www.youtube.com/watch?v=GLqrzLIIW2E). Once the file is edited, it must be converted to .py file, using:
+
+```python
+python uic.py input.ui -o output.py -x
+```
+**NOTE:** The converted .ui should not be modified, as any changes will be overwritten.
 
 ##Contributors
 
