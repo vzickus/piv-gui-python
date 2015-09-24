@@ -30,8 +30,8 @@ Once the repository is cloned, simply navigate to the folder where main_openpiv.
 
 
 #Contributors
-Vytautas Zickus
-Jonathan Taylor
+*Vytautas Zickus
+*Jonathan Taylor
 
 
 
