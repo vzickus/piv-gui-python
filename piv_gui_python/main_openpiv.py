@@ -217,7 +217,7 @@ class Main(QtGui.QWidget):
         ###TODO: try and make this more readable. Automate scaling?
         self.pixmap_big_iw = QtGui.QPixmap.fromImage(ImageQt.ImageQt(scipy.misc.toimage(self.big_windows[self.iw_pos_x_value/(self.iw_big_size_value - self.overlap_size_value) + (self.iw_pos_y_value/(self.iw_big_size_value- self.overlap_size_value))*self.field_shape[1]], cmax = 255, cmin = 0))).scaled(128, 128, QtCore.Qt.KeepAspectRatio)
         
-        ###TODO: need to find a way how to set a vmin,vmax for the images, so the scale of the small_iw and big_iw would be the same...
+        ###TODO: need to check if setting same cmin,cmax for the small/big IW images does give the SAME dynamic range.
         self.ui.label_big_iw.setPixmap(self.pixmap_big_iw)        
         
     def check_state(self,state):
