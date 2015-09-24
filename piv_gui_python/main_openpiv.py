@@ -64,8 +64,9 @@ class Main(QtGui.QWidget):
         self.ui.iw_pos_x.valueChanged.connect(self.iw_pos_x_slider_value)
         self.ui.iw_pos_y.valueChanged.connect(self.iw_pos_y_slider_value)
         
-        #setup redraw iws checkbox
-        self.ui.redraw_iws.stateChanged.connect(self.replot_iws)
+        #setup redraw iws checkbox and its auxilary function
+        self.ui.redraw_iws.stateChanged.connect(self.check_state)
+        self.state = self.ui.redraw_iws.isChecked()
         
         #setup plot correlation matrix button
         self.ui.plot_corr_mat.clicked.connect(self.plot_corr_mat_btn_clicked)
@@ -174,6 +175,8 @@ class Main(QtGui.QWidget):
         ####TODO: scale the whole thing. see http://stackoverflow.com/questions/24106903/resizing-qpixmap-while-maintaining-aspect-ratio, http://stackoverflow.com/questions/21041941/how-to-autoresize-qlabel-pixmap-keeping-ratio-without-using-classes
         ####TODO: enable zooming
         self.ui.label_main.setPixmap(self.main_pixmap)    
+        #Updates the IW images if necessary.
+        self.replot_iws()
         
     def draw_iw_bounds(self,main_pixmap):
         """Draws the rectangles of IW window sizes on the main image. The centre is indicated by a green dot."""
@@ -217,15 +220,19 @@ class Main(QtGui.QWidget):
         ###TODO: need to find a way how to set a vmin,vmax for the images, so the scale of the small_iw and big_iw would be the same...
         self.ui.label_big_iw.setPixmap(self.pixmap_big_iw)        
         
-    def replot_iws(self,state):
+    def check_state(self,state):
+        """Calls replot_iws when checkbox state is changed so that IW's would get updated without changing the frame/IW position"""
+        self.replot_iws()    
+    
+    def replot_iws(self):
         """Sometimes it might be useful to redraw the IWs from previous frame matching, for instance, is there is a need to switch between two main frames, to see the "big picture" flow. """
-        if state == QtCore.Qt.Checked:
-            ###TODO: connect this, so it gets updated properly.
-            print "Redrawing IWs"
-            pass
-        else:
+        
+        self.state = self.ui.redraw_iws.isChecked()
+        if self.state == True:
             self.display_small_iw()
             self.display_big_iw()
+        else:
+            pass
 
     def plot_corr_mat_btn_clicked(self):
         """This function calls a pop up window which shows the correlation matrix"""
